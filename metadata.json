@@ -1,0 +1,6 @@
+{
+  "name": "Territoires Gourmands",
+  "description": "Restauration en ligne de cuisine camerounaise authentique et jus naturels à Douala. Redécouvre ton territoire en saveur.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

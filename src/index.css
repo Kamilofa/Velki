@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-green-dark: #1F3D2E;
+    --color-green-mid: #3E6B3E;
+    --color-orange: #E67A2E;
+    --color-yellow: #F2B134;
+    --color-cream: #F7E8D4;
+    --color-brown: #5A2E1A;
+    --color-river-deep: #134e4a;
+    --color-river-flow: #14b8a6;
+  }
+
+  body {
+    font-family: 'Lato', system-ui, -apple-system, sans-serif;
+    background-color: #F7E8D4;
+    color: #1F3D2E;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+.font-display {
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: 'Lato', system-ui, sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Water Wave Hover Effect on buttons */
+.water-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.water-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #14b8a6 0%, #0f766e 100%);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: -1;
+  border-radius: 50% 50% 0 0;
+  transform: scaleX(1.5);
+}
+
+.water-btn:hover::before {
+  top: 0;
+  border-radius: 0;
+  transform: scaleX(1);
+}
+
+/* African Bogolan geometric pattern */
+.bg-bogolan-pattern {
+  background-image: radial-gradient(#1F3D2E 0.75px, transparent 0.75px), radial-gradient(#E67A2E 0.75px, #F7E8D4 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-african-border {
+  background-image: repeating-linear-gradient(45deg, #1F3D2E 0, #1F3D2E 2px, transparent 0, transparent 8px),
+                    repeating-linear-gradient(-45deg, #E67A2E 0, #E67A2E 2px, transparent 0, transparent 8px);
+}
+
+/* River Ripple Animation */
+@keyframes ripple-wave {
+  0% {
+    transform: scale(0.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple-wave 1.4s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Floating animation for pirogue & leaves */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Flowing wave shimmer */
+@keyframes waveShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: waveShimmer 3s infinite;
+}
