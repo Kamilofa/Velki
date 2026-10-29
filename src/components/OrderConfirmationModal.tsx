@@ -16,7 +16,7 @@ export const OrderConfirmationModal: React.FC<OrderConfirmationModalProps> = ({ 
 
   const shareWhatsAppMessage = () => {
     const text = `Bonjour Territoires Gourmands ! Je viens de valider ma commande ${order.orderNumber} pour ${order.customerName} à ${order.deliveryQuartier}. Total : ${order.total.toLocaleString('fr-FR')} FCFA. Merci !`;
-    const url = `https://wa.me/237699000000?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/237612345678?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 

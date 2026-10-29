@@ -106,13 +106,17 @@ export const InteractiveRiver: React.FC<InteractiveRiverProps> = () => {
     };
     window.addEventListener('resize', onResize);
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const ripples: Ripple[] = [];
-    const driftingObjects: DriftingObject[] = [
-      { id: 1, progress: 0.15, speed: 0.0004, type: 'pirogue', xOffset: 0, rotation: 12, rotSpeed: 0.002 },
-      { id: 2, progress: 0.45, speed: 0.0006, type: 'banana_leaf_1', xOffset: -25, rotation: -15, rotSpeed: 0.004 },
-      { id: 3, progress: 0.72, speed: 0.0005, type: 'banana_leaf_2', xOffset: 30, rotation: 30, rotSpeed: -0.003 },
-      { id: 4, progress: 0.90, speed: 0.0007, type: 'tropical_flower', xOffset: -10, rotation: 45, rotSpeed: 0.006 },
-    ];
+    const driftingObjects: DriftingObject[] = prefersReducedMotion
+      ? [{ id: 1, progress: 0.3, speed: 0.0001, type: 'pirogue', xOffset: 0, rotation: 10, rotSpeed: 0 }]
+      : [
+          { id: 1, progress: 0.15, speed: 0.0004, type: 'pirogue', xOffset: 0, rotation: 12, rotSpeed: 0.002 },
+          { id: 2, progress: 0.45, speed: 0.0006, type: 'banana_leaf_1', xOffset: -25, rotation: -15, rotSpeed: 0.004 },
+          { id: 3, progress: 0.72, speed: 0.0005, type: 'banana_leaf_2', xOffset: 30, rotation: 30, rotSpeed: -0.003 },
+          { id: 4, progress: 0.90, speed: 0.0007, type: 'tropical_flower', xOffset: -10, rotation: 45, rotSpeed: 0.006 },
+        ];
 
     let time = 0;
 
@@ -371,6 +375,8 @@ export const InteractiveRiver: React.FC<InteractiveRiverProps> = () => {
           style={{
             left: item.startX - 30,
             top: item.startY - 30,
+            ['--start-x' as any]: `${item.startX}px`,
+            ['--start-y' as any]: `${item.startY}px`,
             animation: 'flyToCart 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
           }}
         >

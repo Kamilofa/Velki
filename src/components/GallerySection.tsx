@@ -6,27 +6,41 @@ export const GallerySection: React.FC = () => {
   const galleryItems = [
     {
       id: 1,
-      title: 'Ndolé Royal & Crevettes du Wouri',
-      region: 'Littoral',
-      image: '/src/assets/images/hero_ndole_cameroon_1793227837919.jpg',
-      caption: 'Feuilles amères sélectionnées, pâte d\'arachide onctueuse et crevettes fraîches braisées.',
+      title: 'Le Grand Assortiment du Terroir',
+      region: 'Signature Cameroun',
+      image: '/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg',
+      caption: 'Ndolé royal aux crevettes et bœuf, couscous de manioc fin et tranches dorées de plantains mûrs.',
     },
     {
       id: 2,
-      title: 'Poulet DG aux Plantains Caramélisés',
-      region: 'Centre & Ouest',
-      image: '/src/assets/images/poulet_dg_specialty_1793227838069.jpg',
-      caption: 'Le met des grandes fêtes, fondant et relevé aux fines herbes du terroir.',
+      title: 'Emblème Territoires Gourmands',
+      region: 'Identité Culinaire',
+      image: '/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg',
+      caption: 'Le fleuve Wouri au crépuscule, pirogue sawa, carte du Cameroun aux motifs traditionnels et mets du terroir.',
     },
     {
       id: 3,
-      title: 'Poisson Braisé aux Épices de Youpwè',
-      region: 'Douala Port',
-      image: '/src/assets/images/poisson_braise_douala_1793227839193.jpg',
-      caption: 'Bar grillé au feu de bois avec bobolo artisanal et piment maison.',
+      title: 'Charte & Motifs du Terroir',
+      region: 'Origines & Valeurs',
+      image: '/public/assets/aistudio/IMG-20261028-WA0147_1fd01de7.jpg',
+      caption: 'L\'univers de marque : authenticité, partage, terroir, savoir-faire et fierté nationale.',
     },
     {
       id: 4,
+      title: 'Poisson Braisé de Youpwè & Bobolo',
+      region: 'Littoral Douala',
+      image: '/src/assets/images/poisson_braise_douala_1793227839193.jpg',
+      caption: 'Bar grillé au feu de bois avec bobolo artisanal et piment maison de Douala.',
+    },
+    {
+      id: 5,
+      title: 'Poulet DG aux Plantains Caramélisés',
+      region: 'Centre & Ouest',
+      image: '/src/assets/images/poulet_dg_specialty_1793227838069.jpg',
+      caption: 'Le met des grandes fêtes, fondant et relevé aux fines herbes et légumes croquants.',
+    },
+    {
+      id: 6,
       title: 'Foléré Pressé & Gingembre Pur',
       region: 'Grand Nord & Littoral',
       image: '/src/assets/images/jus_naturels_folere_1793227838590.jpg',
@@ -62,19 +76,19 @@ export const GallerySection: React.FC = () => {
         </div>
 
         {/* Circular Dishes Gallery Display */}
-        <div className="relative max-w-5xl mx-auto mb-16">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8">
+        <div className="relative max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 sm:gap-6">
             {galleryItems.map((item, idx) => (
               <div
                 key={item.id}
                 onClick={() => setSelectedPhoto(item)}
                 className={`group flex flex-col items-center cursor-pointer transition-all duration-300 ${
-                  activeIndex === idx ? 'scale-105' : 'opacity-85 hover:opacity-100 hover:scale-102'
+                  activeIndex === idx ? 'scale-105' : 'opacity-90 hover:opacity-100 hover:scale-105'
                 }`}
               >
                 {/* Circular Image Container with water ripple aura */}
-                <div className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full p-1.5 bg-gradient-to-tr from-[#14b8a6] via-[#E67A2E] to-[#F2B134] shadow-xl group-hover:rotate-3 transition-transform">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#F7E8D4] relative">
+                <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full p-1.5 bg-gradient-to-tr from-[#14b8a6] via-[#E67A2E] to-[#F2B134] shadow-xl group-hover:rotate-3 transition-transform">
+                  <div className="w-full h-full rounded-full overflow-hidden border-3 border-[#F7E8D4] relative bg-white">
                     <img
                       src={item.image}
                       alt={item.title}

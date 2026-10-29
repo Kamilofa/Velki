@@ -6,7 +6,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
   const openWhatsApp = () => {
     const text = 'Bonjour Territoires Gourmands ! Je souhaite me renseigner sur le menu du jour et passer commande à Douala.';
-    const url = `https://wa.me/237699000000?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/237612345678?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 

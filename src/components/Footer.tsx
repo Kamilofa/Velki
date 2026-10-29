@@ -12,10 +12,13 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand Info & Slogan */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#E67A2E] to-[#F2B134] flex items-center justify-center p-0.5 shadow-md">
-                <div className="w-full h-full rounded-full bg-[#1F3D2E] flex items-center justify-center">
-                  <Utensils className="w-5 h-5 text-[#F2B134]" />
-                </div>
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#F2B134] shadow-md bg-[#F7E8D4]">
+                <img
+                  src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                  alt="Logo Territoires Gourmands"
+                  className="w-full h-full object-cover scale-110"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <span className="font-display font-extrabold text-xl text-[#F7E8D4]">
                 Territoires Gourmands
@@ -72,7 +75,7 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-2 pt-1">
               <a
-                href="https://wa.me/237699000000"
+                href="https://wa.me/237612345678"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] text-white text-xs font-bold shadow hover:bg-[#20ba5a] transition-colors"
@@ -82,11 +85,11 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="tel:+237699000000"
+                href="tel:+237612345678"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold hover:bg-white/20 transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#F2B134]" />
-                <span>+237 699 00 00 00 / 677 00 00 00</span>
+                <span>+237 6 12 34 56 78</span>
               </a>
             </div>
           </div>

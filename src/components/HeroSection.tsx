@@ -62,8 +62,51 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
               </span>
             </div>
 
+            {/* 4 Brand Pillars directly from uploaded poster */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/60 border border-[#1F3D2E]/10">
+                <div className="w-8 h-8 rounded-lg bg-[#1F3D2E] text-[#F2B134] flex items-center justify-center font-bold text-xs">
+                  🇨🇲
+                </div>
+                <div>
+                  <span className="font-display font-bold text-xs text-[#1F3D2E] block">Terroir</span>
+                  <span className="text-[10px] text-[#1F3D2E]/70">10 Régions</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/60 border border-[#1F3D2E]/10">
+                <div className="w-8 h-8 rounded-lg bg-[#E67A2E] text-white flex items-center justify-center font-bold text-xs">
+                  🍲
+                </div>
+                <div>
+                  <span className="font-display font-bold text-xs text-[#1F3D2E] block">Tradition</span>
+                  <span className="text-[10px] text-[#1F3D2E]/70">Feu de bois</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/60 border border-[#1F3D2E]/10">
+                <div className="w-8 h-8 rounded-lg bg-[#14b8a6] text-white flex items-center justify-center font-bold text-xs">
+                  🛶
+                </div>
+                <div>
+                  <span className="font-display font-bold text-xs text-[#1F3D2E] block">Mer & Nature</span>
+                  <span className="text-[10px] text-[#1F3D2E]/70">Wouri & Côtes</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/60 border border-[#1F3D2E]/10">
+                <div className="w-8 h-8 rounded-lg bg-[#F2B134] text-[#1F3D2E] flex items-center justify-center font-bold text-xs">
+                  ✨
+                </div>
+                <div>
+                  <span className="font-display font-bold text-xs text-[#1F3D2E] block">Culture</span>
+                  <span className="text-[10px] text-[#1F3D2E]/70">Bamiléké & Sawa</span>
+                </div>
+              </div>
+            </div>
+
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
               <button
                 onClick={onOrderClick}
                 className="water-btn group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#E67A2E] text-white font-display font-bold text-base shadow-xl hover:shadow-orange-600/30 transition-all cursor-pointer active:scale-98"
@@ -80,37 +123,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
               </a>
             </div>
 
-            {/* Live Social Proof / Orders today banner */}
-            <div className="pt-4 flex items-center gap-4 border-t border-[#1F3D2E]/10">
-              <div className="flex -space-x-2">
-                <div className="w-9 h-9 rounded-full bg-[#1F3D2E] text-[#F7E8D4] text-xs font-bold flex items-center justify-center border-2 border-[#F7E8D4]">
-                  DO
-                </div>
-                <div className="w-9 h-9 rounded-full bg-[#E67A2E] text-white text-xs font-bold flex items-center justify-center border-2 border-[#F7E8D4]">
-                  AK
-                </div>
-                <div className="w-9 h-9 rounded-full bg-[#3E6B3E] text-white text-xs font-bold flex items-center justify-center border-2 border-[#F7E8D4]">
-                  BP
-                </div>
-              </div>
-              <div className="text-xs text-[#1F3D2E]/80">
-                <span className="font-bold text-[#1F3D2E]">+120 repas livrés</span> aujourd&apos;hui à Akwa, Bonanjo, Bonapriso et Makèpè
-              </div>
+            {/* Signature Quote Banner */}
+            <div className="p-3.5 rounded-2xl bg-[#1F3D2E]/5 border border-[#1F3D2E]/10">
+              <p className="text-xs text-[#1F3D2E]/80">
+                Des plats faits maison, avec des ingrédients frais et locaux.
+              </p>
+              <span className="font-handwriting text-xl text-[#E67A2E] block mt-0.5">
+                « Le goût du vrai, le goût d&apos;ici. »
+              </span>
             </div>
           </div>
 
-          {/* Right Column: Hero Visual with Real Cameroonian Ndolé Image */}
+          {/* Right Column: Hero Visual featuring uploaded official brand assets */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Outer decorative ring glowing with river water and sunset orange */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#14b8a6]/40 via-[#F2B134]/30 to-[#E67A2E]/40 blur-xl opacity-70 -z-10" />
 
-              {/* Main Image Container */}
+              {/* Main Image Container displaying the authentic poster dish */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#1F3D2E]/15 bg-[#1F3D2E] group">
                 <img
-                  src="/src/assets/images/hero_ndole_cameroon_1793227837919.jpg"
-                  alt="Ndolé Royal de Douala avec crevettes, miondo et plantains"
-                  className="w-full h-[380px] sm:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  src="/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg"
+                  alt="Le Grand Assortiment du Terroir - Territoires Gourmands"
+                  className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
 
@@ -118,38 +153,43 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 text-white text-left">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="px-2.5 py-0.5 rounded-full bg-[#E67A2E] text-white text-[11px] font-bold tracking-wider uppercase">
-                      Spécialité du Wouri
+                      Plat Signature
                     </span>
-                    <span className="text-xs text-white/80">Littoral · Sawa</span>
+                    <span className="text-xs text-white/80">Ndolé · Couscous Manioc · Dodo</span>
                   </div>
                   <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
-                    Ndolé Royal de Douala
+                    Le Grand Assortiment du Terroir
                   </h3>
                   <p className="text-xs text-white/80 mt-1 line-clamp-2">
-                    Crevettes fraîches de Youpwè, bœuf fumé fondant, miondo artisanal et plantains mûrs dorés.
+                    L&apos;excellence de la gastronomie camerounaise réunie dans une assiette artisanale en terre cuite.
                   </p>
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-white/20">
                     <span className="font-mono text-lg font-bold text-[#F2B134] tabular-nums">
-                      4 500 FCFA
+                      6 500 FCFA
                     </span>
                     <button
                       onClick={onOrderClick}
-                      className="text-xs bg-white text-[#1F3D2E] hover:bg-[#F2B134] px-3 py-1.5 rounded-lg font-bold transition-colors"
+                      className="text-xs bg-white text-[#1F3D2E] hover:bg-[#F2B134] px-3 py-1.5 rounded-lg font-bold transition-colors cursor-pointer"
                     >
-                      Commander ce plat
+                      Commander ce festin
                     </button>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Badge: Organic Natural Juices */}
-              <div className="absolute -bottom-6 -left-6 bg-[#F7E8D4] border-2 border-[#1F3D2E] rounded-2xl p-3 shadow-xl flex items-center gap-3 animate-float">
-                <div className="w-11 h-11 rounded-xl bg-[#3E6B3E] flex items-center justify-center text-white shadow-inner">
-                  <Droplets className="w-6 h-6 text-teal-300" />
+              {/* Floating Badge: Official Logo Emblem */}
+              <div className="absolute -bottom-6 -left-6 bg-[#F7E8D4] border-2 border-[#1F3D2E] rounded-2xl p-2 shadow-2xl flex items-center gap-3 animate-float max-w-[220px]">
+                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-[#1F3D2E]/20 bg-white">
+                  <img
+                    src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                    alt="Logo Territoires Gourmands"
+                    className="w-full h-full object-cover scale-110"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
-                <div className="text-left pr-2">
-                  <div className="text-[11px] uppercase tracking-wider font-bold text-[#3E6B3E]">100% Pressé Frais</div>
-                  <div className="font-display font-bold text-sm text-[#1F3D2E]">Jus de Foléré & Gingembre</div>
+                <div className="text-left pr-1">
+                  <div className="text-[10px] uppercase tracking-wider font-bold text-[#3E6B3E]">100% Terroir</div>
+                  <div className="font-display font-bold text-xs text-[#1F3D2E] leading-tight">Cuisine Douala & Régions</div>
                 </div>
               </div>
 

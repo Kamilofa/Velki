@@ -38,14 +38,14 @@ export const Navbar: React.FC<NavbarProps> = ({ cartItems, onOpenCart }) => {
             className="flex items-center gap-3 group text-left whitespace-nowrap shrink-0"
             aria-label="Territoires Gourmands - Accueil"
           >
-            {/* Emblem: Cameroon outline silhouette with water wave & steaming pot */}
-            <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-[#E67A2E] to-[#F2B134] flex items-center justify-center p-0.5 shadow-md group-hover:scale-105 transition-transform">
-              <div className="w-full h-full rounded-full bg-[#1F3D2E] flex items-center justify-center overflow-hidden relative">
-                {/* Wouri water wave */}
-                <div className="absolute inset-x-0 bottom-0 h-4 bg-[#14b8a6]/70 rounded-t-full" />
-                <Utensils className="w-5 h-5 text-[#F2B134] relative z-10" />
-                <Droplets className="w-2.5 h-2.5 text-teal-300 absolute top-1.5 right-1.5 z-10" />
-              </div>
+            {/* Authentic Brand Logo from uploaded asset */}
+            <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#F2B134] shadow-md group-hover:scale-105 transition-transform bg-[#F7E8D4]">
+              <img
+                src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                alt="Logo Territoires Gourmands Cameroun"
+                className="w-full h-full object-cover scale-110"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
             <div className="flex flex-col">
@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartItems, onOpenCart }) => {
                 Territoires Gourmands
               </span>
               <span className="font-handwriting text-sm text-[#E67A2E] leading-none">
-                Douala · Terroir du Cameroun
+                Redécouvre ton territoire en saveur
               </span>
             </div>
           </a>
@@ -167,8 +167,8 @@ export const Navbar: React.FC<NavbarProps> = ({ cartItems, onOpenCart }) => {
           </a>
           <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-[#F7E8D4]/70">
             <span>Douala · 7j/7 : 10h30 - 22h30</span>
-            <a href="tel:+237699000000" className="flex items-center gap-1 text-[#F2B134]">
-              <PhoneCall className="w-3.5 h-3.5" /> +237 699 00 00 00
+            <a href="tel:+237612345678" className="flex items-center gap-1 text-[#F2B134]">
+              <PhoneCall className="w-3.5 h-3.5" /> +237 6 12 34 56 78
             </a>
           </div>
         </div>

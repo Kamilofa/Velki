@@ -2,6 +2,20 @@ import { MenuItem, DeliveryQuartier } from '../types';
 
 export const MENU_ITEMS: MenuItem[] = [
   {
+    id: 'grand-assortiment-signature',
+    name: 'Le Grand Assortiment du Terroir',
+    category: 'plats',
+    region: 'Plat Signature Cameroun',
+    price: 6500,
+    description: 'Le festin d\'honneur Territoires Gourmands : Ndolé royal mijoté aux crevettes fraîches et bœuf tendre, accompagné de couscous fin de manioc, plantains mûrs dorés caramélisés et sauce mijotée aux condiments du pays.',
+    image: '/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg',
+    popular: true,
+    spicyLevel: 2,
+    cookingTime: '20-30 min',
+    ingredients: ['Ndolé aux arachides fraîches', 'Crevettes sauvages de Youpwè', 'Bœuf tendre braisé', 'Couscous fin de manioc', 'Plantains mûrs dorés', 'Sauce tomate aux épices secrètes'],
+    heritageStory: 'Le plat emblématique de notre carte, réunissant dans une même assiette en terre cuite la générosité des côtes du Littoral et des plateaux de l\'Ouest.'
+  },
+  {
     id: 'ndole-royal',
     name: 'Ndolé Royal de Douala',
     category: 'plats',
@@ -14,6 +28,20 @@ export const MENU_ITEMS: MenuItem[] = [
     cookingTime: '25-35 min',
     ingredients: ['Feuilles de ndolé fraîches', 'Arachides blanches', 'Crevettes fraîches de Youpwè', 'Bœuf fumé', 'Ail', 'Oignons sautés', 'Huile raffinée'],
     heritageStory: 'Le plat national par excellence chez les peuples Sawa du Littoral, préparé traditionnellement pour célébrer les grandes retrouvailles familiales et festins côtiers.'
+  },
+  {
+    id: 'poisson-braise',
+    name: 'Poisson Braisé de Youpwè & Bobolo',
+    category: 'plats',
+    region: 'Littoral (Estuaire du Wouri)',
+    price: 5000,
+    description: 'Bar entier frais ou carpe de la Sanaga mariné aux épices du terroir (pébè, rondelles, djansang), braisé à la braise de bois d\'acacia. Servi avec bobolo chaud, piments frais et oignons crus émincés.',
+    image: '/src/assets/images/poisson_braise_douala_1793227839193.jpg',
+    popular: true,
+    spicyLevel: 3,
+    cookingTime: '30-40 min',
+    ingredients: ['Bar frais du littoral', 'Pébè & rondelles pilées', 'Djansang torréfié', 'Ail & gingembre sauvage', 'Huile parfumée', 'Piment rouge de Douala'],
+    heritageStory: 'L\'expérience nocturne mythique des berges du fleuve Wouri et du quai de Youpwè à Douala, où la braise exhale un parfum d\'épices inoubliable.'
   },
   {
     id: 'poulet-dg',
@@ -30,27 +58,13 @@ export const MENU_ITEMS: MenuItem[] = [
     heritageStory: 'Né dans les années 1980 au Cameroun pour honorer les invités de marque, ce chef-d\'œuvre allie la douceur du plantain mûr au croustillant du poulet sauté aux petits légumes.'
   },
   {
-    id: 'poisson-braise',
-    name: 'Poisson Braisé de Youpwè',
-    category: 'plats',
-    region: 'Littoral (Douala)',
-    price: 5000,
-    description: 'Bar entier frais ou carpe de la Sanaga mariné aux épices du terroir (pébè, rondelles, djansang), braisé à la braise de bois d\'acacia. Servi avec bobolo chaud et piment de Douala.',
-    image: '/src/assets/images/poisson_braise_douala_1793227839193.jpg',
-    popular: true,
-    spicyLevel: 3,
-    cookingTime: '30-40 min',
-    ingredients: ['Bar frais du littoral', 'Pébè & rondelles pilées', 'Djansang torréfié', 'Ail & gingembre sauvage', 'Huile parfumée', 'Piment rouge frais'],
-    heritageStory: 'L\'expérience nocturne mythique des berges du fleuve Wouri et du quai de Youpwè à Douala, où la braise exhale un parfum d\'épices inoubliable.'
-  },
-  {
     id: 'eru-waterleaf',
     name: 'Eru & Waterleaf des Grands Plateaux',
     category: 'plats',
     region: 'Sud-Ouest & Nord-Ouest',
     price: 4000,
     description: 'Lianes d\'Eru sauvage finement ciselées, feuilles de waterleaf soyeuses, huile de palme vierge dorée, peau de bœuf fumée (kanda), crevettes séchées et poisson fumé.',
-    image: '/src/assets/images/hero_ndole_cameroon_1793227837919.jpg', // high-grade fallback visual
+    image: '/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg',
     popular: true,
     spicyLevel: 2,
     cookingTime: '25-35 min',
@@ -78,7 +92,7 @@ export const MENU_ITEMS: MenuItem[] = [
     region: 'Grassfields (Nord-Ouest & Ouest)',
     price: 4500,
     description: 'Purée onctueuse et veloutée de tubercules de taro pilés au mortier traditionnel, servie dans un cratère avec sa sauce jaune aux épices médicinales et sel gemme kanwa.',
-    image: '/src/assets/images/poisson_braise_douala_1793227839193.jpg',
+    image: '/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg',
     popular: false,
     spicyLevel: 2,
     cookingTime: '25-30 min',
@@ -148,7 +162,7 @@ export const MENU_ITEMS: MenuItem[] = [
     region: 'Littoral (Douala)',
     price: 1000,
     description: 'Fins rubans de pâte de manioc fermentée, enveloppés et cuits à la vapeur dans des feuilles de marantacée. L\'accompagnement inséparable du Ndolé et du poisson.',
-    image: '/src/assets/images/hero_ndole_cameroon_1793227837919.jpg',
+    image: '/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg',
     popular: true,
     ingredients: ['Manioc sélectionné', 'Feuilles marantacées végétales traditionnelles']
   },
@@ -175,15 +189,15 @@ export const MENU_ITEMS: MenuItem[] = [
     ingredients: ['Manioc fermenté roui', 'Feuilles protectrices naturelles']
   },
   {
-    id: 'fufu-manioc',
-    name: 'Fufu de Manioc Moelleux',
+    id: 'couscous-manioc',
+    name: 'Couscous de Manioc Fin',
     category: 'accompagnements',
-    region: 'Sud-Ouest & Littoral',
+    region: 'Cameroun entier',
     price: 1000,
-    description: 'Boule de fufu chaud et soyeux, travaillée au pilon avec une texture élastique incomparable pour napper l\'Eru ou les sauces à l\'huile rouge.',
-    image: '/src/assets/images/hero_ndole_cameroon_1793227837919.jpg',
+    description: 'Semoule de manioc tamisée et cuite à la vapeur, légère et idéale pour saucer les sauces riches comme le Ndolé.',
+    image: '/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg',
     popular: false,
-    ingredients: ['Farine de manioc traditionnel pure', 'Eau bouillante de source']
+    ingredients: ['Manioc pur roui et séché', 'Eau de source']
   }
 ];
 
@@ -251,10 +265,27 @@ export const TESTIMONIALS = [
     rating: 5
   },
   {
-    name: 'Dr. Jean-Marc Mbida',
-    location: 'Denver - Bonamoussadi',
     dish: 'Poisson Braisé de Youpwè',
     text: '« Le goût du poisson braisé de Youpwè directement chez moi à Bonamoussadi sans les embouteillages. L’assaisonnement au pébè et djansang est un chef d\'œuvre. »',
     rating: 5
   }
 ];
+
+export const BRAND_PILLARS = [
+  { id: 'terroir', label: 'Terroir', description: 'La terre nourricière de nos dix régions' },
+  { id: 'cuisine-traditionnelle', label: 'Cuisine traditionnelle', description: 'Recettes ancestrales mijotées au feu de bois' },
+  { id: 'mer-nature', label: 'Mer / Nature', description: 'L\'estuaire du Wouri, poissons et produits sauvages' },
+  { id: 'culture', label: 'Culture', description: 'Motifs Bamiléké & fierté gastronomique' }
+];
+
+export const RESTAURANT_INFO = {
+  name: 'Territoires Gourmands',
+  phone: '+237 6 12 34 56 78',
+  phoneFormatted: '+237 6 12 34 56 78',
+  whatsappUrl: 'https://wa.me/237612345678',
+  city: 'Douala, Cameroun',
+  hours: 'Lundi - Dimanche : 10h30 - 22h30',
+  hashtag: '#TerritoiresGourmands',
+  slogan: 'Redécouvre ton territoire en saveur',
+  signature: 'Des plats faits maison, avec des ingrédients frais et locaux. Le goût du vrai, le goût d\'ici.'
+};
