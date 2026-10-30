@@ -126,11 +126,11 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onAddToCart, cartItemI
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 bg-[#1F3D2E]/10"
                     referrerPolicy="no-referrer"
-                    loading="lazy"
+                    decoding="async"
+                    loading="eager"
                     onError={(e) => {
-                      // Fallback to grand assortiment signature or ndole
                       const target = e.currentTarget;
                       if (!target.src.includes('IMG-20261028-WA0145')) {
                         target.src = '/assets/images/IMG-20261028-WA0145_63942619.jpg';
