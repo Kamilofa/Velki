@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ cartItems, onOpenCart }) => {
             {/* Authentic Brand Logo from uploaded asset */}
             <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#F2B134] shadow-md group-hover:scale-105 transition-transform bg-[#F7E8D4]">
               <img
-                src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                src="/assets/images/IMG-20261028-WA0146_c9e559a1.jpg"
                 alt="Logo Territoires Gourmands Cameroun"
                 className="w-full h-full object-cover scale-110"
                 referrerPolicy="no-referrer"

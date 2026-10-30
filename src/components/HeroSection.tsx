@@ -143,7 +143,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
               {/* Main Image Container displaying the authentic poster dish */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-[#1F3D2E]/15 bg-[#1F3D2E] group">
                 <img
-                  src="/public/assets/aistudio/IMG-20261028-WA0145_63942619.jpg"
+                  src="/assets/images/IMG-20261028-WA0145_63942619.jpg"
                   alt="Le Grand Assortiment du Terroir - Territoires Gourmands"
                   className="w-full h-[400px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
@@ -181,7 +181,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
               <div className="absolute -bottom-6 -left-6 bg-[#F7E8D4] border-2 border-[#1F3D2E] rounded-2xl p-2 shadow-2xl flex items-center gap-3 animate-float max-w-[220px]">
                 <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-[#1F3D2E]/20 bg-white">
                   <img
-                    src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                    src="/assets/images/IMG-20261028-WA0146_c9e559a1.jpg"
                     alt="Logo Territoires Gourmands"
                     className="w-full h-full object-cover scale-110"
                     referrerPolicy="no-referrer"

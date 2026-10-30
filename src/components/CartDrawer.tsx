@@ -176,6 +176,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                         alt={item.name}
                         className="w-16 h-16 rounded-xl object-cover shrink-0 border border-[#1F3D2E]/10"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.src.includes('IMG-20261028-WA0145')) {
+                            target.src = '/assets/images/IMG-20261028-WA0145_63942619.jpg';
+                          }
+                        }}
                       />
 
                       <div className="flex-1 min-w-0">

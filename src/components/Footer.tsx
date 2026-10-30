@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#F2B134] shadow-md bg-[#F7E8D4]">
                 <img
-                  src="/public/assets/aistudio/IMG-20261028-WA0146_c9e559a1.jpg"
+                  src="/assets/images/IMG-20261028-WA0146_c9e559a1.jpg"
                   alt="Logo Territoires Gourmands"
                   className="w-full h-full object-cover scale-110"
                   referrerPolicy="no-referrer"

@@ -129,6 +129,13 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onAddToCart, cartItemI
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    onError={(e) => {
+                      // Fallback to grand assortiment signature or ndole
+                      const target = e.currentTarget;
+                      if (!target.src.includes('IMG-20261028-WA0145')) {
+                        target.src = '/assets/images/IMG-20261028-WA0145_63942619.jpg';
+                      }
+                    }}
                   />
 
                   {/* Top Tags */}
@@ -258,6 +265,12 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onAddToCart, cartItemI
                 alt={selectedItemForModal.name}
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('IMG-20261028-WA0145')) {
+                    target.src = '/assets/images/IMG-20261028-WA0145_63942619.jpg';
+                  }
+                }}
               />
               <div className="absolute bottom-2 left-2 px-2.5 py-1 rounded bg-[#1F3D2E]/90 text-white text-xs font-bold">
                 {selectedItemForModal.region}
